@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/**
+ * style.css
+ * @authors Joe Jiang (hijiangtao@gmail.com)
+ * @date    2017-05-28 17:08:25
+ * @version $Id$
+ */
+
+body {
+	background-color: gray;
+}
