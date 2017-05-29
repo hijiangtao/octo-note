@@ -4,7 +4,9 @@
   "description": "Easy note for local modification and storage.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server -d --hot --env.dev",
+    "build": "webpack -p",
+    "test": ""
   },
   "repository": {
     "type": "git",
@@ -39,6 +41,10 @@
   },
   "eslintConfig": {
     "extends": "enough",
+    "rules": {
+      "indent": ["error", "tab"],
+      "no-console": "warn"
+    },
     "env": {
       "browser": true,
       "node": true
@@ -48,5 +54,8 @@
     "presets": [
       "es2015"
     ]
+  },
+  "dependencies": {
+    "vue": "^2.3.3"
   }
 }
