@@ -16,4 +16,17 @@ let detectEnv = function() {
 	return true;
 }
 
-export { detectEnv }
+let pad = function(number) {
+	if (number < 10) {
+		return '0' + number;
+	}
+	return number;
+}
+
+let getISOString = function(date) {
+	return date.getUTCFullYear() +
+		'-' + pad(date.getUTCMonth() + 1) +
+		'-' + pad(date.getUTCDate())
+}
+
+export { detectEnv, getISOString }
