@@ -52,7 +52,7 @@ const mutations = {
 }
 
 const actions = {
-	[ADD_ITEM]({ commit, item }) {
+	[ADD_ITEM]({ commit }, item ) {
 		commit('ADD_ITEM', item)
 		commit('STORE_UPDATE', '+')
 	}
