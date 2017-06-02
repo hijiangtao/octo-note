@@ -1,11 +1,14 @@
 import Vue from 'vue'
-import App from './App'
 import router from './router'
 import store from './store'
 import * as init from './api/init'
+
+import * as VueTouch from 'vue-touch'
 import 'weui'
 
+Vue.use(VueTouch, {name: 'v-touch'})
 Vue.config.productionTip = false
+import App from './App'
 
 if (!init.detectEnv()) {
 	alert('Sorry! No Web Storage support...');
