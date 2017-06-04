@@ -1,8 +1,17 @@
-# inote
+# Octo Note
 
-> An offline note app
+> A simple and small note app that can run well in your device, even in uncertain network conditions.
+
+## Some parts that worths to be mentioned:
+
+* Vue 
+* webpack (babel, eslint)
+* Progressive Web App
+* HTML5 (localstorage)
 
 ## Build Setup
+
+You can download the codes and run it locally with the following guidances.
 
 ``` bash
 # install dependencies
@@ -27,4 +36,11 @@ npm run e2e
 npm test
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Details
+
+With the help of webpack plugin [**SW Precache Webpack Plugin**](https://github.com/goldhand/sw-precache-webpack-plugin), octo-note is a Progressive Web App now, that can run well in some Andriod and Windows Devices, for more detail please visit [Progressive Web Apps - Google Developers](https://developers.google.com/web/progressive-web-apps/).
+
+## Contact
+
+* Github - [hijiangtao](https:github.com/hijiangtao)
+* [Email](mailto:hijiangtao@gmail.com)
