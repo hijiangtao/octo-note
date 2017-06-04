@@ -2,6 +2,10 @@ var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
+var SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
+
+// const PUBLIC_PATH = 'https://hijiangtao.github.io/octo-note/'  // webpack needs the trailing slash for output.publicPath
+
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -63,5 +67,19 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new SWPrecacheWebpackPlugin(
+      {
+        cacheId: 'octo-note',
+        dontCacheBustUrlsMatching: /\.\w{8}\./,
+        filename: 'service-worker.js',
+        minify: true,
+        navigateFallback: process.env.NODE_ENV === 'production'
+      ? config.build.assetsPublicPath + 'index.html'
+      : config.dev.assetsPublicPath + 'index.html',
+        staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
+      }
+    )
+  ]
 }

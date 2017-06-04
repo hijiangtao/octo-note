@@ -6,7 +6,7 @@ import * as init from './api/init'
 import * as VueTouch from 'vue-touch'
 import 'weui'
 
-Vue.use(VueTouch, {name: 'v-touch'})
+Vue.use(VueTouch, { name: 'v-touch' })
 Vue.config.productionTip = false
 import App from './App'
 
@@ -21,3 +21,10 @@ const app = new Vue({
 	render: h => h(App)
 })
 app;
+
+// service worker
+(() => {
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('/octo-note/service-worker.js');
+	}
+})();
