@@ -1,5 +1,5 @@
 <template>
-	<div class="page__bd page__bd_spacing">
+	<div class="weui-tab__panel">
 		<div class="page__hd">
 			<h1 class="page__title">{{ title }}</h1>
 			<p class="page__desc">{{ desc }}</p>
@@ -31,7 +31,7 @@
 		<div class="weui-cells__title" v-text="cards[1] + items.length"></div>
 		<transition-group name="list-complete" tag="div" class="weui-cells">
 			<div v-for="(item, index) in items" :key="item" class="item-holder">
-				<v-touch class="weui-cell" :class="{ 'swipecurrent': currentIndex===index }" @swipeleft="onSwipleLeft(index)" @tap="onTap(index)" tag="div">
+				<v-touch class="weui-cell" :class="{ 'swipecurrent': currentIndex===index }" @swipeleft="onSwipleLeft(index)" :swipe-options="{ direction: 'horizontal'}" @tap="onTap(index)" tag="div">
 					<div class="weui-cell__bd">
 						<p v-text="item.name"></p>
 					</div>
@@ -130,19 +130,6 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.page,
-body {
-	background-color: #f8f8f8;
-}
-
-.page__hd {
-	padding: 20px 40px;
-}
-
-.page__bd_spacing {
-	padding: 0;
-}
-
 .item-holder {
 	position: relative;
 	height: 100%;
