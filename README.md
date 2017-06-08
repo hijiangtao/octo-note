@@ -2,6 +2,12 @@
 
 > A simple and small note app that can run well in your device, even in uncertain network conditions.
 
+## Preview 
+
+![](/static/FireShot-Octo-Note.png )
+
+Online: [link](https://hijiangtao.github.io/octo-note/) (PWA features can only be shown in some Chrome browsers with non-iOS environment)
+
 ## Some parts that worths to be mentioned:
 
 * Vue 
