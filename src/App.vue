@@ -1,7 +1,9 @@
 <template>
 	<div class="page__bd page__bd_spacing">
 		<div class="weui-tab" id="app">
-			<router-view></router-view>
+			<div class="weui-tab__panel">
+				<router-view></router-view>
+			</div>
 
 			<!-- <footer class="page__ft">
 				<a href="//hijiangtao.github.io/">
@@ -20,7 +22,7 @@ import appNav from '@/components/Nav'
 export default {
 	name: 'app',
 	components: {
-		appNav
+		'app-nav': appNav
 	}
 }
 </script>
@@ -29,19 +31,6 @@ export default {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-/*.page__ft {
-	padding-top: 40px;
-    padding-bottom: 10px;
-    text-align: center;
-}
-.page__ft img {
-	height: 25px;
-	border-radius: 4px;
-}
-footer p {
-	font-size: 0.6rem;
-	color: gray;
-}*/
 
 .page,
 body {
@@ -49,8 +38,12 @@ body {
 	height: 100vh;
 }
 
+.router-link-active p {
+	color: #09bb07;
+}
+
 .page__hd {
-	padding: 20px 40px;
+	padding: 20px 15px;
 }
 
 .page__bd_spacing {

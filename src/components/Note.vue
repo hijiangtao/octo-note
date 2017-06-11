@@ -1,5 +1,5 @@
 <template>
-	<div class="weui-tab__panel">
+	<div>
 		<div class="page__hd">
 			<h1 class="page__title">{{ title }}</h1>
 			<p class="page__desc">{{ desc }}</p>

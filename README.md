@@ -1,5 +1,7 @@
 # Octo Note
 
+[![codebeat badge](https://codebeat.co/badges/9f27a9b8-3e2e-4d96-b319-ef0bf742a80e)](https://codebeat.co/projects/github-com-hijiangtao-octo-note-master)
+
 > A simple and small note app that can run well in your device, even in uncertain network conditions.
 
 ## Some parts that worths to be mentioned:

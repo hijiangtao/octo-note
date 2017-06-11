@@ -1,13 +1,13 @@
 <template>
 	<div class="weui-tabbar">
-		<a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
+		<router-link to="/note" class="weui-tabbar__item">
             <img src="../assets/img/icon_nav_layout.png" alt="" class="weui-tabbar__icon">
             <p class="weui-tabbar__label">Note</p>
-        </a>
-        <a href="javascript:;" class="weui-tabbar__item">
+        </router-link>
+        <router-link to="/tool" class="weui-tabbar__item">
             <img src="../assets/img/icon_nav_search.png" alt="" class="weui-tabbar__icon">
-            <p class="weui-tabbar__label">Weather</p>
-        </a>
+            <p class="weui-tabbar__label">Tool</p>
+        </router-link>
         <a href="javascript:;" class="weui-tabbar__item">
             <img src="../assets/img/icon_nav_search.png" alt="" class="weui-tabbar__icon">
             <p class="weui-tabbar__label">Discover</p>
@@ -20,7 +20,7 @@
 </template>
 <script>
 export default {
-	name: 'app-nav',
+	name: 'appNav',
 	methods: {}
 }
 </script>
