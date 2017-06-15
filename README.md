@@ -16,6 +16,7 @@ Online: [link](https://hijiangtao.github.io/octo-note/) (PWA features can only b
 * webpack (babel, eslint)
 * Progressive Web App
 * HTML5 (localstorage)
+* WEUI
 
 ## Build Setup
 
