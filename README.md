@@ -1,5 +1,6 @@
 # Octo Note
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/78435b00b7264f03aec28f5a6cd9f038)](https://www.codacy.com/app/hijiangtao/octo-note?utm_source=github.com&utm_medium=referral&utm_content=hijiangtao/octo-note&utm_campaign=badger)
 [![codebeat badge](https://codebeat.co/badges/9f27a9b8-3e2e-4d96-b319-ef0bf742a80e)](https://codebeat.co/projects/github-com-hijiangtao-octo-note-master)
 
 > A simple and small note app that can run well in your device, even in uncertain network conditions.
