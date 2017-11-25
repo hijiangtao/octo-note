@@ -30,7 +30,7 @@
 		</div>
 		<div class="weui-cells__title" v-text="cards[1] + items.length"></div>
 		<transition-group name="list-complete" tag="div" class="weui-cells">
-			<div v-for="(item, index) in items" :key="item" class="item-holder">
+			<div v-for="(item, index) in items" :key="index" class="item-holder">
 				<v-touch class="weui-cell" :class="{ 'swipecurrent': currentIndex===index }" @swipeleft="onSwipleLeft(index)" :swipe-options="{ direction: 'horizontal'}" @tap="onTap(index)" tag="div">
 					<div class="weui-cell__bd">
 						<p v-text="item.name"></p>
