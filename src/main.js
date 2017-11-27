@@ -6,7 +6,9 @@ import * as init from './api/init'
 import * as VueTouch from 'vue-touch'
 import 'weui'
 
-Vue.use(VueTouch, { name: 'v-touch' })
+Vue.use(VueTouch, {
+	name: 'v-touch'
+})
 Vue.config.productionTip = false
 import App from './App'
 

@@ -8,10 +8,10 @@
             <img src="../assets/img/icon_nav_search.png" alt="" class="weui-tabbar__icon">
             <p class="weui-tabbar__label">Tool</p>
         </router-link>
-        <a href="javascript:;" class="weui-tabbar__item">
+        <router-link to="/info" class="weui-tabbar__item">
             <img src="../assets/img/icon_nav_search.png" alt="" class="weui-tabbar__icon">
             <p class="weui-tabbar__label">Discover</p>
-        </a>
+        </router-link>
         <a href="javascript:;" class="weui-tabbar__item">
             <img src="../assets/img/icon_nav_nav.png" alt="" class="weui-tabbar__icon">
             <p class="weui-tabbar__label">More</p>

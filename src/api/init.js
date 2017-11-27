@@ -29,13 +29,27 @@ export let getISOString = (date) => {
 		'-' + pad(date.getUTCDate())
 }
 
-export let getLocation = () => {
+export let getLocation = (callback) => {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition((position) => {
 			const lat = position.coords.latitude;
 			const lng = position.coords.longitude;
+
+			console.log(lat, lng)
+			callback(null, {
+				lat,
+				lng
+			});
 		})
 	} else {
-		window.alert("Could not get location");
+		callback("Could not get location", {});
 	}
+}
+
+export let JSONP = (url, callback) => {
+	const link = `${url}&callback=${callback}`;
+	let script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src = link;
+	document.getElementsByTagName("head")[0].appendChild(script);
 }
