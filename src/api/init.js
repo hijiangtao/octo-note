@@ -35,11 +35,12 @@ export let getLocation = (callback) => {
 			const lat = position.coords.latitude;
 			const lng = position.coords.longitude;
 
-			console.log(lat, lng)
 			callback(null, {
 				lat,
 				lng
 			});
+		}, (err) => {
+			console.log(JSON.stringify(err))
 		})
 	} else {
 		callback("Could not get location", {});
@@ -52,4 +53,5 @@ export let JSONP = (url, callback) => {
 	script.type = "text/javascript";
 	script.src = link;
 	document.getElementsByTagName("head")[0].appendChild(script);
+
 }
