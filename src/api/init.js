@@ -40,7 +40,7 @@ export let getLocation = (callback) => {
 				lng
 			});
 		}, (err) => {
-			console.log(JSON.stringify(err))
+			callback(err);
 		})
 	} else {
 		callback("Could not get location", {});

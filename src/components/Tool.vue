@@ -86,7 +86,7 @@ export default {
 		getWeather(type) {
 			getLocation((err, {lat, lng}) => {
 				if (err) {
-					console.log(err);
+					console.log(JSON.stringify(err));
 				}
 
 				if (type === 'local') {
