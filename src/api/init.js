@@ -29,26 +29,34 @@ export let getISOString = (date) => {
 		'-' + pad(date.getUTCDate())
 }
 
-export let getLocation = (callback) => {
+export let getLocation = (type, callback) => {
+	if (type === 'beijing') {
+		return callback(null, {
+			lat: 39.9042,
+			lng: 116.4074
+		});
+	}
+
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition((position) => {
 			const lat = position.coords.latitude;
 			const lng = position.coords.longitude;
 
-			callback(null, {
+			return callback(null, {
 				lat,
 				lng
 			});
 		}, (err) => {
-			callback(err);
+			return callback(err);
 		})
 	} else {
-		callback("Could not get location", {});
+		return callback("Could not get location", {});
 	}
 }
 
 export let JSONP = (url, callback) => {
-	const link = `${url}&callback=${callback}`;
+	const link = `${url}&callback=JSONPcallback`;
+	window.JSONPcallback = callback;
 	let script = document.createElement("script");
 	script.type = "text/javascript";
 	script.src = link;

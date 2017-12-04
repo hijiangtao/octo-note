@@ -31,7 +31,7 @@
 			</div>
 
 			<div v-show="props.length" class="weui-panel weui-panel_access">
-				<div class="weui-panel__hd">文字组合列表</div>
+				<div class="weui-panel__hd">天气详细信息</div>
 				<div class="weui-panel__bd">
 					<div v-for="item in props" v-show="item.text" class="weui-media-box weui-media-box_text">
 						<h4 class="weui-media-box__title">{{ item.title }}</h4>
@@ -84,14 +84,9 @@ export default {
 	},
 	methods: {
 		getWeather(type) {
-			getLocation((err, {lat, lng}) => {
+			getLocation(type, (err, {lat = 39.9042, lng = 116.4074}) => {
 				if (err) {
 					console.log(JSON.stringify(err));
-				}
-
-				if (type === 'local') {
-					lat = 39.9042;
-					lng = 116.4074;
 				}
 
 				const url = `https://api.darksky.net/forecast/${weatherAPI}/${lat},${lng}?format=jsonp`;
@@ -99,6 +94,7 @@ export default {
 			});	
 		},
 		updateWeatherData(object) {
+			debugger;
 			const humidity = humidityPercentage(object.currently.humidity);
 			this.props.push({
 				title: "Humidity",
