@@ -94,7 +94,7 @@ export default {
 			});	
 		},
 		updateWeatherData(object) {
-			debugger;
+			// debugger;
 			const humidity = humidityPercentage(object.currently.humidity);
 			this.props.push({
 				title: "Humidity",
