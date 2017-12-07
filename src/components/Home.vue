@@ -6,7 +6,9 @@
 			<p>
 				<router-link to="/" >Home</router-link> | 
 				<router-link to="/note" >Note</router-link> | 
-				<router-link to="/tool" >Tool</router-link>
+				<router-link to="/tool" >Weather</router-link> | 
+				<router-link to="/stock" >Stock</router-link> |
+				<router-link to="/info" >Discovery</router-link>
 			</p>
 			
 			<footer class="page__ft">

@@ -63,3 +63,32 @@ export let JSONP = (url, callback) => {
 	document.getElementsByTagName("head")[0].appendChild(script);
 
 }
+
+export let GET = (url, callback) => {
+	let ajax = new XMLHttpRequest();
+
+	// Seta tipo de requisição e URL com os parâmetros
+	ajax.open("GET", url, true);
+
+	// Envia a requisição
+	ajax.send();
+
+	// Cria um evento para receber o retorno.
+	ajax.onreadystatechange = () => {
+		// Caso o state seja 4 e o http.status for 200, é porque a requisiçõe deu certo.
+		if (ajax.readyState == 4 && ajax.status == 200) {
+			callback(JSON.parse(ajax.responseText));
+		}
+	}
+}
+
+export let formatDate = (d) => {
+	let month = '' + (d.getMonth() + 1),
+		day = '' + d.getDate(),
+		year = d.getFullYear();
+
+	if (month.length < 2) month = '0' + month;
+	if (day.length < 2) day = '0' + day;
+
+	return [year, month, day].join('-');
+}

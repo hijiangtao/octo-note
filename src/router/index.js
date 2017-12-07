@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import Note from '@/components/Note'
 import Tool from '@/components/Tool'
 import Info from '@/components/Info'
+import Stock from '@/components/Stock'
 
 Vue.use(Router)
 
@@ -18,11 +19,15 @@ export default new Router({
 		component: Note
 	}, {
 		path: '/tool',
-		name: 'Tool',
+		name: 'Weather',
 		component: Tool
 	}, {
 		path: '/info',
 		name: 'Info',
 		component: Info
+	}, {
+		path: '/stock',
+		name: 'Stock',
+		component: Stock
 	}]
 })
