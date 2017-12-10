@@ -11,6 +11,12 @@
 
 Online: [link](https://hijiangtao.github.io/octo-note/) (PWA features can only be shown in some Chrome browsers with non-iOS environment)
 
+## Features
+
+* Note
+* Weather
+* Stock
+
 ## Some parts that worths to be mentioned:
 
 * Vue 
